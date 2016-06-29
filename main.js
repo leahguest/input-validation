@@ -6,11 +6,11 @@
     // currentStep should keep track of the index of current step that is visible.
     var currentStep = 0;
 
-    // `updateButtons` should show the back button if the current step is
-    // beyond the first step, otherwise hide it. It should also show the
-    // next button if the current step is before the last step, otherwise
-    // hide it. We call this function at the bottom of the scope to do an
-    // initial show/hide.
+    // `updateButtons` should add the `is-active` class to the back button if
+    // the current step is beyond the first step, otherwise remove it. It should
+    // also show the next button if the current step is before the last step,
+    // otherwise hide it. We call this function at the bottom of the scope to do
+    // an initial show/hide.
     function updateButtons() {
 
     }
@@ -23,9 +23,10 @@
 
     // `next` should validate the inputs on the current step by calling
     // `validate()`.
+    // * If `validate` returns true, increment the value of `currentStep`.
     // * If `validate` returns true, the current step should be hidden and
-    // the next step should be shown (currentStep++).
-    // * `next` should also call `updateButtons` to display the proper
+    // the next step should be shown (use the class `is-active`).
+    // * `next` should also call `updateButtons` to display the appropriate
     // buttons.
     function next() {
 
@@ -33,9 +34,10 @@
 
     // `back` should validate the inputs on the current step by calling
     // `validate()`.
+    // * If `validate` returns true, decrement the value of `currentStep`.
     // * If `validate` returns true, the current step should be hidden and
-    // the previous step should be shown (currentStep--).
-    // * `back` should also call `updateButtons` to display the proper
+    // the previous step should be shown (use the class `is-active`).
+    // * `back` should also call `updateButtons` to display the appropriate
     // buttons.
     function back() {
 
